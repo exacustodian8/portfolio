@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name = "viewport" content = "width=device-width, initial-scale=1">
+        <meta name="description" content="Portfolio of Edy: posters, flyers and illustration, plus hand-coded HTML, CSS and JavaScript.">
+        <title>Edy: Portfolio</title>
+        <link rel = "stylesheet" href = "styles.css">
+        <link rel = "preconnect" href = "https://fonts.googleapis.com">
+        <link rel = "preconnect" href = "https://fonts.gstatic.com" crossorigin>
+        <link href = "https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header class = "nav">
+            <a class = "nav__logo" href = "#top">My Portfolio.</a>
+            <nav class = "nav__links" aria-label = "Main">
+                <a href = "#work">Work</a>
+                <a href = "#about">About</a>
+            </nav>      
+            <a class = "btn btn--small" href = "#contact">Contact</a>
+        </header>
+        <main id = "top">
+            <section class = "hero">
+                <div class = "hero__text">
+                    <h1>I design it. <br>Then I <em>build</em> it.</h1>
+                    <p>Hi, I'm Edy. Interested in technology, building things, and figuring stuff out.</p>
+                    <a class = "btn" href = "#work">See my work</a>
+                </div>
+                <div class = "hero__visual" aria-hidden="true">
+                    <div class = "orb"></div>
+                    <div class = "sticker sticker--1">Illustrator</div>
+                    <div class = "sticker sticker--2">HTML · CSS · JS</div>
+                    <div class = "sticker sticker--3">Posters</div>
+                </div>
+            </section>
+            <div class = "marquee" aria-hidden="true">
+                <div class = "marquee__track">
+                    <span>Posters</span><span>Flyers</span><span>Illustrator</span><span>Frontend</span>
+                    <span>Posters</span><span>Flyers</span><span>Illustrator</span><span>Frontend</span>
+                </div>
+            </div>
+            <section class = "section" id = "work">
+                <h2 class = "reveal">Things I've made</h2>
+                <div class="filters" role="group" aria-label="Filter projects">
+                    <button class="chip is-active" data-filter="all" aria-pressed="true">All</button>
+                    <button class="chip" data-filter="print" aria-pressed="false">Posters &amp; flyers</button>
+                </div>
+                <ul class = "grid reveal">
+                    <li class = "card" data-category="print">
+                        <button class = "card__btn"
+                                data-title = "BEST IASI is recruiting"
+                                data-desc = "Recruiment poster for BEST Iasi. + descrption"
+                                data-tools = "Adobe Illustrator">
+                            <img src = "images/afis_recrutari.png" alt = "Poster with a glowing crystal ball and the text BEST IASI is recruiting">
+                            <span class = "card__title">BEST IASI is recruiting</span>
+                            <span class = "card__meta">Print · Illustrator</span>
+                        </button>    
+                    </li>
+                    <li class = "card" data-category = "print">
+                        <button class = "card__btn"
+                                data-title = "BEST IASI is recruiting"
+                                data-desc = "Recruiment flyer for BEST Iasi. + description"
+                                data-tools = "Adobe Illustrator">
+                            <img src = "images/flyer_recrutari.png" alt = "Flyer that shows different elements medieval inspired with the text BEST Iasi is recruiting">
+                            <span class = "card__title">BEST IASI is recruiting</span>
+                            <span class = "card__meta">Print · Illustrator</span>
+                        </button>
+                    </li>
+                    <li class = "card" data-category = "print">
+                        <button class = "card__btn"
+                                data-title = "Crazyflie"
+                                data-desc = "Poster showing the datasheet of the crazyflie drone."
+                                data-tools = "Adobe Illustrator">
+                            <img src = "images/poster_drona.jpg" alt = "Poster that shows the datasheet of the crazyflie drone using a anaglyph effect">
+                            <span class = "card__title">Poster title</span>
+                            <span class = "card__meta">Print · Illustrator</span>
+                        </button>
+                    </li>
+                </ul>
+            </section>
+            <section class="section about" id="about">
+                <div class="about__card" aria-hidden="true">
+                    <span>Hi, I'm</span>
+                    <strong>Edy.</strong>
+                </div>
+                <div class="about__text reveal">
+                    <p class="eyebrow">About</p>
+                    <h2>Curious by nature. <br>Builder by choice.</h2>
+                    <p>I'm a graduate in Automation and Applied Informatics interested in software development, web programming, and robotics. I enjoy building applications, exploring new technologies, and bringing ideas to life through code.</p>
+                    <p>I like working on practical projects, experimenting with different tools, and understanding how things work behind the scenes. Outside of coding, I enjoy working with people, taking on new challenges, and constantly learning something new</p>
+                </div>
+            </section>
+            <section class = "contact reveal" id = "contact"> 
+                <h2>Let's make something.</h2>
+                <p>Always happy to talk about roles, projects or design.</p>
+                <a class = "btn btn--dark" href = "mailto:edy.tanasa@gmail.com">edy.tanasa@gmail.com</a>
+            </section>
+        </main>
+        <footer class="footer">
+            <p>© 2026 My Portfolio.</p>
+            <a href="#top">Back to top ↑</a>
+        </footer>
+        <dialog class="modal" id="modal" aria-labelledby="modal-title">
+            <form method="dialog">
+                <button class="modal__close" aria-label="Close">✕</button>
+            </form>
+            <img class="modal__img" id="modal-img" src="" alt="">
+            <div class="modal__body">
+                <h3 id="modal-title"></h3>
+                <p id="modal-desc"></p>
+                <p><strong>Tools:</strong> <span id="modal-tools"></span></p>
+            </div>
+        </dialog>
+        <script src = "script.js"></script>
+    </body>
+</html>
